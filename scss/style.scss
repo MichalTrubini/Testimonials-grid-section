@@ -99,3 +99,66 @@ body {
         border: 2px solid #733FC8;
     }
 }
+
+@media screen and (min-width: 1200px) {
+    
+    .main {
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .cards {
+        width: 111rem;
+        max-width: 111rem;
+        display:grid;
+        grid-gap: 3rem;;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 'gridOne gridOne gridTwo gridThree'
+                             'gridFour gridFive gridFive gridThree';
+
+        &__card {
+            margin: 0;
+        }
+
+        &__summary {
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    #cardOne {
+        grid-area: gridOne;
+        background: url(../images/bg-pattern-quotation.svg) top no-repeat, #7541c8;
+        background-position-x: 360px;
+    }
+
+    #cardTwo {
+        grid-area: gridTwo;
+    }
+
+    #cardThree {
+        grid-area: gridFour;
+        padding: 2.6rem 3.2rem;
+    }
+
+    #cardFour {
+        grid-area: gridFive;
+        padding: 2.6rem 3.2rem;
+    }
+
+    #cardFive {
+        grid-area: gridThree;
+        padding: 2.6rem 3.2rem;
+    }
+}
+
+.cards__card-style-one .cards__summary {
+    margin-bottom: 1.6rem;
+}
+
+.cards__card-style-one .cards__quote {
+    width: 100%;
+}
+
+.cards__card-style-two .cards__summary {
+    margin-bottom: 1.6rem;
+}
